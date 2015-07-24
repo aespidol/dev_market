@@ -60,8 +60,12 @@ $route['add_cart'] = 'customers/add_cart';
 $route['delete/(:any)'] = 'customers/delete_cart/$1';
 $route['pay'] = 'customers/pay';
 //admin dashboard
-$route['admin'] = 'admindash/index';
-$route['register'] = 'adminslr/register';
-$route['login'] = 'adminslr/index';
-$route['productedit'] = 'admindash/products';
-$route['logoff'] = 'customers';
+$route['admin'] = 'logregs/index';
+$route['register'] = 'logregs/register';
+$route['login'] = 'logregs/login';
+$route['addproduct'] = 'dashboards/addproduct';
+$route['editproduct'] = 'dashboards/editproduct';
+$route['orders'] = 'dashboards/index';
+$route['products'] = 'dashboards/get_products';
+$route['deleterow/(:any)'] = 'dashboards/delete_row/$1';
+$route['logoff'] = 'logregs/logoff';

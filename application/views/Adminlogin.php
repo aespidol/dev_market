@@ -6,6 +6,7 @@
 <body>
 	<?= $this->session->flashdata['errors'] ?>
 	<?= $this->session->flashdata['success'] ?>
+	<?php if(!empty($this->session->userdata('loggedin'))) { ?>
 	<h2>Register to become an Admin!</h2>
 	<form action="/register" method="post">
 		<p>Name:</p>
@@ -18,6 +19,7 @@
 		<input type="password" name="passwordconfirmation">
 		<input type="submit" value="Register">
 	</form>
+	<?php } ?>
 	<h2>Login</h2>
 	<form action="/login" method="post">
 		<p>Email:</p>
